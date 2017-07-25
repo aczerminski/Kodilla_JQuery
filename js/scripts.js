@@ -1,12 +1,10 @@
-console.log('tekst');
 var span = $("span");
 var ignored = ['first', 'third', 'fifth'];
+var currentId = element.getAttribute('id');
 span.each(function(index, element) {
-	if(index != ignored) {
+	if(currentId.indexOf(ignored) > -1) {
 		$(element).css('color', 'red');
 	};
-	var currentId = element.getAttribute('id');
-	console.log('element', element.getAttribute('id'));
 });
 
 var paragraphs = $('p');
