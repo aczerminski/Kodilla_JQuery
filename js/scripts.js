@@ -1,6 +1,7 @@
 var span = $("span");
+var ignored = ['#first', '#third', '#fifth'];
 span.each(function(index, element) {
-	if(index % 2 == 0) {
+	if(index != ignored) {
 		$(element).css('color', 'red');
 	};
 });
